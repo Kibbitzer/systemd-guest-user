@@ -7,7 +7,7 @@ RefuseManualStop=yes
 
 [Service]
 Type=oneshot
-ExecStart=/usr/sbin/bash -c 'id guest >& /dev/null || useradd -c Guest guest'
+ExecStart=/usr/sbin/bash -c 'id guest >& /dev/null || useradd -c Convidado guest'
 ExecStart=/usr/sbin/usermod -d /home/guest/ guest
 ExecStart=/usr/sbin/chsh -s /bin/sh guest
 ExecStart=/usr/sbin/passwd -d guest
